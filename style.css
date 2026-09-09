@@ -2,7 +2,7 @@
             --bg-color: #0f172a;
             --card-bg: #1e293b;
             --text-color: #f8fafc;
-            --accent-color: #3b82f6;
+            --accent-color: #3bf673;
         }
 
         body {
@@ -23,7 +23,7 @@
             background: var(--card-bg);
             padding: 2.5rem;
             border-radius: 1rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             max-width: 500px;
             width: 90%;
             border: 2px solid #334155;
@@ -55,13 +55,20 @@
             align-items: center;
             justify-content: center;
             margin: 2rem 0;
-            text-shadow: 0 0 20px rgba(255,255,255,0.4);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
             transition: transform 0.1s ease;
         }
 
         /* Colors */
-        .num-red { color: #ef4444; text-shadow: 0 0 20px rgba(239, 68, 68, 0.6); }
-        .num-blue { color: #3b82f6; text-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
+        .num-red {
+            color: #ef4444;
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+        }
+
+        .num-blue {
+            color: #3b82f6;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+        }
 
         button {
             background-color: var(--accent-color);
@@ -73,7 +80,7 @@
             border-radius: 0.5rem;
             cursor: pointer;
             transition: all 0.2s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         button:hover {
@@ -109,5 +116,11 @@
             font-weight: bold;
             margin-top: 1rem;
         }
-        .correct { color: #10b981; }
-        .wrong { color: #ef4444; }
+
+        .correct {
+            color: #10b981;
+        }
+
+        .wrong {
+            color: #ef4444;
+        }

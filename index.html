@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Disco Number - Clash of Champions</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <!-- 1. START SCREEN -->
-    <div id="start-screen" class="screen active">
-        <h1>Number Disco</h1>
-        <p>Ingat angka yang muncul beserta warnanya, lalu jumlahkan warna yang diminta!</p>
-        <button onclick="startGame()">Mulai Game</button>
+    <div class="container">
+        <!-- 1. START SCREEN -->
+        <div id="start-screen" class="screen active">
+            <h1>Number Disco</h1>
+            <p>Ingat angka yang muncul beserta warnanya, lalu jumlahkan warna yang diminta!</p>
+            <button onclick="startGame()">Mulai Game</button>
+        </div>
+
+        <!-- 2. GAMEPLAY SCREEN -->
+        <div id="game-screen" class="screen">
+            <div id="round-indicator" style="font-weight: bold; color: #94a3b8;">Round 1/5</div>
+            <div id="disco-display">-</div>
+        </div>
+
+        <!-- 3. ANSWER SCREEN -->
+        <div id="answer-screen" class="screen">
+            <h2>Waktunya Untuk Menjawab!</h2>
+            <div id="question-text" class="instruction">Hitung jumlah semua angka berwarna...</div>
+            <input type="number" id="user-answer" placeholder="Masukkan jawaban" onkeypress="handleKeyPress(event)">
+            <br>
+            <button onclick="checkAnswer()">Kirim Jawaban</button>
+        </div>
+
+        <!-- 4. RESULT SCREEN -->
+        <div id="result-screen" class="screen">
+            <h2>Hasil</h2>
+            <div id="status-text" class="status-msg"></div>
+            <p id="correct-answer-text" style="margin: 1rem 0; font-size: 1.1rem;"></p>
+            <button onclick="nextRound()" id="next-btn">Gass Round Berikutnya</button>
+        </div>
     </div>
 
-    <!-- 2. GAMEPLAY SCREEN -->
-    <div id="game-screen" class="screen">
-        <div id="round-indicator" style="font-weight: bold; color: #94a3b8;">Round 1/5</div>
-        <div id="disco-display">-</div>
-    </div>
-
-    <!-- 3. ANSWER SCREEN -->
-    <div id="answer-screen" class="screen">
-        <h2>Waktunya Menjawab!</h2>
-        <div id="question-text" class="instruction">Hitung jumlah semua angka berwarna...</div>
-        <input type="number" id="user-answer" placeholder="Masukkan jawaban" onkeypress="handleKeyPress(event)">
-        <br>
-        <button onclick="checkAnswer()">Kirim Jawaban</button>
-    </div>
-
-    <!-- 4. RESULT SCREEN -->
-    <div id="result-screen" class="screen">
-        <h2>Hasil</h2>
-        <div id="status-text" class="status-msg"></div>
-        <p id="correct-answer-text" style="margin: 1rem 0; font-size: 1.1rem;"></p>
-        <button onclick="nextRound()" id="next-btn">Round Berikutnya</button>
-    </div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,113 @@
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --accent-color: #3b82f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 90%;
+            border: 2px solid #334155;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #f59e0b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 2rem;
+            text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Disco Display */
+        #disco-display {
+            font-size: 6rem;
+            font-weight: bold;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+            text-shadow: 0 0 20px rgba(255,255,255,0.4);
+            transition: transform 0.1s ease;
+        }
+
+        /* Colors */
+        .num-red { color: #ef4444; text-shadow: 0 0 20px rgba(239, 68, 68, 0.6); }
+        .num-blue { color: #3b82f6; text-shadow: 0 0 20px rgba(59, 130, 246, 0.6); }
+
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        input[type="number"] {
+            background-color: #0f172a;
+            border: 2px solid #475569;
+            color: white;
+            padding: 0.75rem;
+            font-size: 1.5rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            width: 80%;
+            margin-bottom: 1.5rem;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .instruction {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .status-msg {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        .correct { color: #10b981; }
+        .wrong { color: #ef4444; }

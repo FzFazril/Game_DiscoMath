@@ -1,15 +1,25 @@
 // Konfigurasi Game
 const totalRounds = 3;
 const colors = ['red', 'blue'];
+<<<<<<< HEAD
 const colorClasses = { red: 'num-red', blue: 'num-blue' };
 const colorNamesIndo = { red: 'MERAH ❤️', blue: 'BIRU 💙' };
+=======
+const colorClasses = { red: 'num-red', blue: 'num-blue'};
+const colorNamesIndo = { red: 'MERAH ❤️', blue: 'BIRU 💙'};
+>>>>>>> 05e7f4b66ed2ac1fecdbfb5ed0ec3ac42501b25c
 
 let currentRound = 1;
 let sequence = [];
 let targetColor = '';
 let correctAnswer = 0;
+<<<<<<< HEAD
 let sequenceLength = 100; // Jumlah angka yang muncul per ronde
 let displaySpeed = 2000; // Kecepatan muncul angka (ms)
+=======
+let sequenceLength = 5; // Jumlah angka yang muncul per ronde
+let displaySpeed = 1000; // Kecepatan muncul angka (ms)
+>>>>>>> 05e7f4b66ed2ac1fecdbfb5ed0ec3ac42501b25c
 
 function showScreen(screenId) {
     document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -30,7 +40,11 @@ function startGame() {
 function generateRound() {
     document.getElementById('round-indicator').innerText = `Round ${currentRound} / ${totalRounds}`;
     sequence = [];
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 05e7f4b66ed2ac1fecdbfb5ed0ec3ac42501b25c
     // Naikkan tingkat kesulitan tiap ronde
     if (currentRound === 2) { sequenceLength = 7; displaySpeed = 800; }
     if (currentRound === 3) { sequenceLength = 9; displaySpeed = 600; }
